@@ -1,4 +1,8 @@
-This C++ program checks if a given string is a palindrome by comparing characters from the start and end of the string using a class structure. A palindrome reads the same forward and backward, such as "radar" or "madam."
+A new fruit juice machine has been purchased for the cafeteria, and a program is needed
+to make the machine function properly. The machine dispenses apple juice, orange
+juice, mango lassi, and fruit punch in recyclable containers. In this programming
+example, we write a program for the fruit juice machine so that it can be put into
+operation...
 
 
 
