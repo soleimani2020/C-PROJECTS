@@ -1,1 +1,1 @@
-This C++ program determines whether a given number is a "happy number" by repeatedly replacing the number with the sum of the squares of its digits, using Floyd's cycle detection algorithm to identify if the sequence reaches 1 (happy) or enters a loop (sad). It encapsulates the logic in a class, allowing user input and output to display the result.
+Here we do cool C++ projects !
