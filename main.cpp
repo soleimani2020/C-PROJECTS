@@ -40,7 +40,9 @@ int romanType::convert_roman_to_decimal(){
     
     decimal =0;
     int n= roman.length();
-     
+
+    
+    // The last character (V) will sinmply be added to the total decimal as it does not satisfy the if condition ! 
     for (int i=0; i<n ; i++)
     {
         if ( i<n-1 && roman_value[roman[i]] <  roman_value[roman[i+1]] ){
