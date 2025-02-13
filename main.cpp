@@ -1,74 +1,129 @@
-// This program checks whether a given string is a palindrome using a class structure in C++
-// palindrome is a word, phrase, or sequence of characters that reads the same forward as it does backward
-//  (e.g., "radar", "madam").
-
-
 #include <iostream>
 
 using namespace std;
 
+class lineType{
+
+private:
+    float a1,b1,c1;
+   
+// line1 = (a1,b1,c1)
+// line2 = (a2,b2,c2)
+// a2 =line.a1
+// b2 =line.b1
+// c2= line.c1
+
+
+
+public:
+    lineType(float a1,float b1,float c1){
+        this->a1 = a1;
+        this->b1 = b1;
+        this->c1 = c1;
+    }
+
+    void is_nonvertical()
+    {
+        if (b1 !=0){
+        cout << "a" << a1 << "b" << b1;
+        float slope = (-a1)/b1;
+        cout << "\nThe ine is nonvertical and the slope is: " << slope << endl;
+        }
+        else{
+        cout << "The line is vertical."<< endl;
+        }
+   
+    }
+
+
+
+void is_equal0(lineType line){
+   
+    if ((a1 * line.b1 == b1 * line.a1) && (a1 * line.c1 == c1 * line.a1)){
+        cout << "The two lines are equal" << endl;
+    }else{
+    cout << "These are not equal lines." << endl;
+    }
+}
+
+
+void is_equal(lineType line){
+    float k = 12.5;
+    if ((a1==line.a1 && b1==line.b1 && c1==line.c1 ) || (a1==k*line.a1 && b1==k*line.b1 && c1==k*line.c1 )){
+        cout << "The two lines are equal" << endl;
+    }else{
+        cout << "The two lines are not equal" << endl;
+    }
+}
+
+
+
+void is_parallel(lineType line){
+    float slope1 = (-a1/b1);
+    float slope2 = (-line.a1)/line.b1;
+    if ((slope1 == slope2) || (b1==0 && line.b1==0))
+    {
+    cout <<"The two lines are parallel" << endl;
+    }else{
+        cout <<"The two lines are not paralle !"<< endl;
+    }
+}
 
 
 
 
-class Palindrome{
-    public:
-        // Function declaration
-        bool Check_Palindrome(const std::string& statement);
+void is_perpendicular(lineType line){
+   
+    float slope1 = (-a1/b1);
+    float slope2 = (-line.a1)/line.b1;
+    if ((slope1*slope2==-1) || ((a1==0 && line.b1==0) || (b1==0 && line.a1==0))){
+       
+        cout << "The two lines are prependicular !" << endl;
+    }else{
+       
+        cout << "The two lines are not prependicular !" << endl;
+    }
+
+}
+
+
+
+void is_intersection(lineType line){
+   
+    if (a1*line.b1-line.a1*b1 == 0){
+       
+        cout << "There is no intersection found !" << endl;
+       
+    }else{
+        float x = (c1*line.b1 - line.c1*b1  )/(a1*line.b1 - line.a1*b1 );
+        float y = (a1*line.c1 - line.a1*c1  )/(a1*line.b1 - line.a1*b1);
+       
+        cout << "The intersection point is X:" << x <<" "<<"Y: " << y << endl;
+    }
+}
+
 
 
 };
 
-
-// Function definition using the scope resolution operator ::
-bool Palindrome::Check_Palindrome(const std::string& statement) {
-    
-    for (int i = 0, j = statement.length() - 1; i < j; i++, j--) {
-        if (statement[i] != statement[j])
-            return false;
-    }
-    return true;
-}
-
-
-
-
-
-int main() {
-
-    std::cout << "Hello, Welcome to the world of magic!" << std::endl;
-    std::cout << "Please give us your string " << std::endl;
-    std::string statement;
-    std::cin >> statement;
-
-    Palindrome object;
-    bool is_palindrome = object.Check_Palindrome(statement);
-
-    if (is_palindrome) {
-        std::cout << "This is a palindrome" << std::endl;
-    } else {
-        std::cout << "This is not a palindrome" << std::endl;
-    }
-
-
+int main()
+{
+   
+    cout << "Welcome to our little calculator" << endl;
+   
+    lineType line1(1,2,3);
+    lineType line2(2,-1,5);
+    //lineType line3(100,200,300);
+   
+    line1.is_nonvertical();
+    line1.is_equal(line2);
+    line1.is_parallel(line2);
+    line1.is_perpendicular(line2);
+    line1.is_intersection(line2);
+   
+    cout << "Happy calculaing , see you soon !" << endl;
+   
 
     return 0;
+
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
