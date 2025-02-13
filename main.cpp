@@ -5,7 +5,7 @@
 
 1. we need a board game (3*3) -> define -> show  
 2. we need two players ( switch player function ): 
-   current player ---> next plaer
+   current player ---> next player
 3. we need to know winning condition (check for winner):
     / Check Raws 
     / Check columns 
@@ -13,7 +13,6 @@
 
 4. check if the game is a draw 
 5. If the board has empty spots, then some one has one ! otherwise it is a draw
-
 6. while (invalid move -> n,m >=3) , ask for the right move !  
 
 
